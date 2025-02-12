@@ -116,9 +116,15 @@ class Collect
         return $this;
     }
 
+//    public function splice($idx, $length = 1): Collect
+//    {
+//        array_splice($idx, $length);
+//        return $this;
+//    }
     public function splice($idx, $length = 1): Collect
     {
-        array_splice($idx, $length);
+        array_splice($this->array, $idx, $length); // Изменяем массив $items
         return $this;
     }
+
 }
